@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `BlogGram`,
+    title: `BlogGrams`,
     author: {
       name: `Christ Memory Sitorus`,
       summary: `Software Developer | React Native Dev | Javascript Enthusiast | 
@@ -49,6 +49,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

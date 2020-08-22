@@ -3,7 +3,7 @@ title: New Beginnings
 date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 tags: "test1, test2"
-images: "https://medifactia.com/wp-content/uploads/2018/01/placeholder-300x300.png"
+images: "./opening.png"
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

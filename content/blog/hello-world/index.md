@@ -3,7 +3,7 @@ title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
 tags: "test1, test2"
-images: "https://medifactia.com/wp-content/uploads/2018/01/placeholder-300x300.png"
+images: "./opening.png"
 ---
 
 This is my first post on my new fake blog! How exciting!

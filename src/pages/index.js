@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -18,8 +19,8 @@ const BlogIndex = ({ data, location }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-              <img 
-                src={node.frontmatter.images} 
+              <Img 
+                fluid={node.frontmatter.images.childImageSharp.fluid} 
                 className="content__img" 
                 alt={node.frontmatter.title} 
                 title={node.frontmatter.title}
@@ -52,7 +53,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            images
+            images {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
