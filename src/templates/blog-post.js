@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -24,6 +23,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginTop: rhythm(1),
               marginBottom: 0,
             }}
+            className="nunito"
           >
             {post.frontmatter.title}
           </h1>
@@ -36,7 +36,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.date}
           </p>
+          <hr/>
         </header>
+        <img src={post.frontmatter.images} className="content-image" />
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -44,7 +46,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           }}
         />
         <footer>
-          <Bio />
+          
         </footer>
       </article>
 
@@ -93,6 +95,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        images
         date(formatString: "MMMM DD, YYYY")
         description
       }

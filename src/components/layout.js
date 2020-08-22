@@ -1,69 +1,64 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
+import Header from "./header"
+import {ThemeProvider} from "styled-components";
+import { GlobalStyles } from "../utils/globalStyles"
+import { lightTheme, darkTheme } from "../utils/theme"
+import Switch from "react-switch";
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
-
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
+const Layout = ({ children }) => {
+  
+  const [checked, setChecked] = useState(JSON.parse(localStorage.getItem('colorTheme')) || false)
+  const themeToggler = () => {
+    checked === true ? changeToDark() : changeToLight()
   }
+  console.log(checked);
+  const changeToDark = () => {
+    localStorage.setItem('colorTheme', false)
+    setChecked(false)
+  }
+
+  const changeToLight = () => {
+    localStorage.setItem('colorTheme', true)
+    setChecked(true)
+  }
+
+  const toggle = (
+    <Switch 
+      checked={checked} 
+      uncheckedIcon={false} 
+      checkedIcon={false} 
+      onChange={themeToggler}
+      onColor="#DDD"
+    />
+  )
+  let header = <Header toggle={toggle} />
+
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header>{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-    </div>
+    <ThemeProvider theme={checked === true? lightTheme : darkTheme}>
+      <>
+        <GlobalStyles/>
+        <div>
+          <div
+            style={{
+              marginLeft: `auto`,
+              marginRight: `auto`,
+              maxWidth: rhythm(24),
+              padding: `20px ${rhythm(3 / 4)}`,
+            }}
+          >
+            <header>{header}</header>
+            <main>{children}</main>
+            <footer style={{textAlign: `center`, marginTop: `30px`}}>
+              © {new Date().getFullYear()}, Built with
+              🤟
+              <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </footer>
+          </div>
+        </div>
+      </>
+    </ThemeProvider>
   )
 }
 

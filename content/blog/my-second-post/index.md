@@ -1,6 +1,9 @@
 ---
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
+description: "Hello World"
+tags: "test1, test2"
+images: "https://medifactia.com/wp-content/uploads/2018/01/placeholder-300x300.png"
 ---
 
 Wow! I love blogging so much already.
