@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }) => {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+            <Link style={{ boxShadow: `none` }} key={node.fields.slug} to={node.fields.slug}>
               <Img 
                 fluid={node.frontmatter.images.childImageSharp.fluid} 
                 className="content__img" 

@@ -4,6 +4,11 @@ date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
 tags: "test1, test2"
 images: "./opening.png"
+content: 
+    - "content/opening.png"
+    - "content/content 1.png"
+    - "content/content 2.png"
+    - "content/content 3.png"
 ---
 
 This is my first post on my new fake blog! How exciting!

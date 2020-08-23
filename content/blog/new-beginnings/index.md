@@ -4,6 +4,11 @@ date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 tags: "test1, test2"
 images: "./opening.png"
+content: 
+    - "content/opening.png"
+    - "content/content 1.png"
+    - "content/content 2.png"
+    - "content/content 3.png"
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

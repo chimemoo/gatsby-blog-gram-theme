@@ -1,15 +1,19 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  console.log(post.frontmatter.content)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -39,7 +43,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
           <hr/>
         </header>
-        <Img fluid={post.frontmatter.images.childImageSharp.fluid} className="content-image" />
+        <Carousel showArrows={true}>
+          {post.frontmatter.images && post.frontmatter.content.map(
+            ({fluid}) => (
+              <Img fluid={fluid} />
+            )
+          )}
+        </Carousel>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -101,6 +111,11 @@ export const pageQuery = graphql`
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        content {
+          fluid{
+            ...GatsbyImageSharpFluid
           }
         }
         date(formatString: "MMMM DD, YYYY")
