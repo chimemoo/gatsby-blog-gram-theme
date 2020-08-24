@@ -21,14 +21,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
+      <article className="post-body">
         <header>
           <h1
             style={{
               marginTop: rhythm(1),
               marginBottom: 0,
             }}
-            className="nunito"
+            className="post-title"
           >
             {post.frontmatter.title}
           </h1>
@@ -38,6 +38,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               display: `block`,
               marginBottom: rhythm(1),
             }}
+            className="post-date"
           >
             {post.frontmatter.date}
           </p>
@@ -54,7 +55,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </Carousel>
           )
         }
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section className="post-article" dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),

@@ -1,20 +1,21 @@
+/*---- RESET CSS ----*/
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/*---- RESET CSS ----*/
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,200&display=swap');
 
-:root {
-    --background-color: #fefefe;
-    --color: #343434;
-}
-
 body {
-    background-color: var(--background-color);
-    color: var(--color);
     font-family: 'Nunito', sans-serif;
 }
 
-.nunito { 
-    font-family: 'Nunito', sans-serif;
-}
-
+/*---- Header -----*/
 .header-container {
     display: block;
     margin-top: 30px;
@@ -41,7 +42,11 @@ body {
 .header-toggle {
     float: right;
 }
+/*---- Header -----*/
 
+
+
+/*---- Front Content -----*/
 .content-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -61,4 +66,52 @@ body {
 
 .content-image {
     width: 100%;
+}
+/*---- Front Content -----*/
+
+/*---- Blog Content -----*/
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6,
+.post-body p {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.post-body > .post-article > blockquote {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0px;
+    border: none;
+}
+
+.post-body > .post-article > blockquote h1,
+.post-body > .post-article > blockquote h2,
+.post-body > .post-article > blockquote h3,
+.post-body > .post-article > blockquote h4,
+.post-body > .post-article > blockquote h5,
+.post-body > .post-article > blockquote h6,
+.post-body > .post-article > blockquote p {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-body > .post-article ol {
+    list-style-position: inside;
+}
+
+.post-body > .post-article ul {
+    padding: 1em;
+}
+
+.post-body > .post-article > .gatsby-highlight {
+    background-color: #37383e;
+    padding: 20px;
+    margin: 10px 0px;
+    border-radius: 10px;
 }

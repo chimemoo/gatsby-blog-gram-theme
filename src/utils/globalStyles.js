@@ -8,4 +8,8 @@ export const GlobalStyles = createGlobalStyle`
   .header-title {
     color: ${({ theme }) => theme.text};
   }
+  .post-body .post-article blockquote {
+    color: ${({ theme }) => theme.body};
+    background: ${({ theme }) => theme.text};
+  }
 `

@@ -14,3 +14,23 @@ egg yolk will be less rich."?
 ([Wikipedia Link](https://en.wikipedia.org/wiki/Salted_duck_egg))
 
 Yeah, I didn't either.
+
+Example of `books_published_last_two_years.txt`
+```text
+1262771
+9011996
+2007022
+9389522
+8181760
+9203790
+```
+
+Example of `all_coding_books.txt`
+```text
+4140074
+3058732
+4181244
+8709089
+9097893
+2606750
+```

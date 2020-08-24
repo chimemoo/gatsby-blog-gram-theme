@@ -16,6 +16,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/content`,
+        name: `content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
       },
@@ -27,14 +34,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/content`,
-        name: `content`,
-      },
-    },
-    `gatsby-remark-images`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -57,7 +56,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
