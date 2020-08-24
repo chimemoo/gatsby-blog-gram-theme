@@ -4,11 +4,6 @@ date: "2015-05-06T23:46:37.121Z"
 description: "Hello World"
 tags: "test1, test2"
 images: "./opening.png"
-content: 
-    - "content/opening.png"
-    - "content/content 1.png"
-    - "content/content 2.png"
-    - "content/content 3.png"
 ---
 
 Wow! I love blogging so much already.

@@ -51,10 +51,12 @@ const Layout = ({ children, title }) => {
           >
             <header>{header}</header>
             <main>{children}</main>
-            <footer style={{textAlign: `center`, marginTop: `30px`}}>
-              © {new Date().getFullYear()}, Built with
-              🤟
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <footer 
+              style={{textAlign: `center`, marginTop: `30px`}}
+            >
+              © {new Date().getFullYear()} Built with 🤟 · 
+              Powered By <a href="https://www.gatsbyjs.org">Gatsby</a> · 
+              <a href="https://github.com/chimemoo/gatsby-blog-gram-theme"> BlogGram Theme</a>
             </footer>
           </div>
         </div>

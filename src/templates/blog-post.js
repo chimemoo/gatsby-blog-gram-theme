@@ -43,13 +43,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
           <hr/>
         </header>
-        <Carousel showArrows={true}>
-          {post.frontmatter.images && post.frontmatter.content.map(
-            ({fluid}) => (
-              <Img fluid={fluid} />
-            )
-          )}
-        </Carousel>
+        {
+          post.frontmatter.content && (
+            <Carousel showArrows={true}>
+              {post.frontmatter.content.map(
+                ({fluid}) => (
+                  <Img fluid={fluid} />
+                )
+              )}
+            </Carousel>
+          )
+        }
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{

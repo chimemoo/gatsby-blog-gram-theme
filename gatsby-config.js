@@ -23,17 +23,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/content`,
-        name: `content`,
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: `${__dirname}/content/content`,
+        name: `content`,
       },
     },
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

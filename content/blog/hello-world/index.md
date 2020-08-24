@@ -5,10 +5,10 @@ description: "Hello World"
 tags: "test1, test2"
 images: "./opening.png"
 content: 
-    - "content/opening.png"
-    - "content/content 1.png"
-    - "content/content 2.png"
-    - "content/content 3.png"
+    - "example-content/opening.png"
+    - "example-content/content 1.png"
+    - "example-content/content 2.png"
+    - "example-content/closing.png"
 ---
 
 This is my first post on my new fake blog! How exciting!
@@ -25,10 +25,5 @@ Oh, and here's a great quote from this Wikipedia on
 > wrapped in plastic, and vacuum packed. From the salt curing process, the
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
-
-```php
-fdfdf
-```
-
 
 ![Chinese Salty Egg](./salty_egg.jpg)
