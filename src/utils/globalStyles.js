@@ -12,4 +12,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.body};
     background: ${({ theme }) => theme.text};
   }
+  .post-body > .post-article > .gatsby-highlight {
+    background-color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.body};
+  }
 `

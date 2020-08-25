@@ -1,15 +1,18 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
-  Gatsby's Blog Gram  Theme
+  Gatsby's Blog Gram  Theme 📷
 </h1>
-<p align="center">
-  (On Development Phase)
-</p>
 
-This is theme build from gatsby starter blog. This theme inspired by microblog that exist in instagram. This is theme bring useful feature :  
+This is theme build from gatsby starter blog. This theme inspired by microblog that exist in instagram. 
+
+## 🔨 Feature
+Added Feature from gatsby starter blog :
 1. Image Post
 2. Image Slider (On blog post)
 3. Dark/Light Theme
+
+Feature to add :
+1. Continuous scroll at Home Page
 <br><br>
 ## 🚀 Quick start
 
@@ -41,9 +44,10 @@ This is theme build from gatsby starter blog. This theme inspired by microblog t
 
 
 ## 📷 Screenshoot : 
-![Homepage](./src/assets/screenshoot.png)
-![Blogpost Dark](./src/assets/screenshoot2.png)
-![Blogpost Light](./src/assets/screenshoot3.png)
+![Homepage Dark](./src/assets/screenshoot1.png)
+![Homepage Light](./src/assets/screenshoot2.png)
+![Blogpost Dark](./src/assets/screenshoot3.png)
+![Blogpost Light](./src/assets/screenshoot4.png)
 
 
 <!-- AUTO-GENERATED-CONTENT:END -->

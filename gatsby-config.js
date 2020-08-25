@@ -2,14 +2,14 @@ module.exports = {
   siteMetadata: {
     title: `BlogGrams`,
     author: {
-      name: `Christ Memory Sitorus`,
+      name: `Chimemoo`,
       summary: `Software Developer | React Native Dev | Javascript Enthusiast | 
       Data Science Enthusiast`,
     },
     description: `Share`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://blog-gram.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `chimemooo`,
     },
   },
   plugins: [

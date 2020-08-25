@@ -7,13 +7,13 @@ import { GlobalStyles } from "../utils/globalStyles"
 import { lightTheme, darkTheme } from "../utils/theme"
 import Switch from "react-switch";
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, metaData }) => {
   
   const [checked, setChecked] = useState(JSON.parse(localStorage.getItem('colorTheme')) || false)
   const themeToggler = () => {
     checked === true ? changeToDark() : changeToLight()
   }
-  console.log(checked);
+  
   const changeToDark = () => {
     localStorage.setItem('colorTheme', false)
     setChecked(false)
@@ -34,7 +34,7 @@ const Layout = ({ children, title }) => {
       onColor="#363537"
     />
   )
-  let header = <Header toggle={toggle} title={title} />
+  let header = <Header toggle={toggle} metaData={metaData} />
 
   return (
     <ThemeProvider theme={checked === true? lightTheme : darkTheme}>

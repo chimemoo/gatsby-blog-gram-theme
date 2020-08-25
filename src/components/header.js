@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export default function Header({toggle, title}) {
+export default function Header({toggle, metaData}) {
   return (
     <div>
       <div className="header-container">
@@ -13,10 +13,15 @@ export default function Header({toggle, title}) {
         <Link 
           style={{ boxShadow: `none`, textDecoration: `none` }} 
           className="header-title" to={"/"}>
-          <p style={{ marginBottom: `0px` }}>{title}</p>
+          <p style={{ marginBottom: `0px` }}>{metaData.title}</p>
         </Link>
+        
         <p className="header-subtitle">
-          Software Developer | React Native Dev | Javascript Enthusiast | Data Science Enthusiast
+          {metaData.author.name || ''}
+          <br/>
+          <small>
+            {metaData.author.summary || ''}
+          </small>
         </p>
       </div>
     </div>

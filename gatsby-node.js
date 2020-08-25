@@ -127,5 +127,3 @@ exports.createSchemaCustomization = ({
     })
   )
 }
-
-console.log(exports);

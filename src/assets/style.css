@@ -7,6 +7,9 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+pre {
+    margin: 0px;
+}
 /*---- RESET CSS ----*/
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,200&display=swap');
@@ -59,9 +62,8 @@ body {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 0px;
-    -webkit-box-shadow: 10px 10px 14px 0px rgba(221,221,221,0.09);
-    -moz-box-shadow: 10px 10px 14px 0px rgba(221,221,221,0.09);
-    box-shadow: 10px 10px 14px 0px rgba(221,221,221,0.09);
+    -webkit-box-shadow: 2px 5px 15px 2px rgba(52,52,52,0.14); 
+    box-shadow: 2px 5px 15px 2px rgba(52,52,52,0.14);
 }
 
 .content-image {
@@ -106,12 +108,20 @@ body {
 }
 
 .post-body > .post-article ul {
-    padding: 1em;
+    padding: 0px 1em;
+}
+
+.post-body > .post-article ul > li {
+    margin-bottom: 0.5em;
 }
 
 .post-body > .post-article > .gatsby-highlight {
-    background-color: #37383e;
     padding: 20px;
     margin: 10px 0px;
     border-radius: 10px;
+}
+
+.post-image-content {
+    -webkit-box-shadow: 2px 5px 15px 2px rgba(52,52,52,0.14); 
+    box-shadow: 2px 5px 15px 2px rgba(52,52,52,0.14);
 }

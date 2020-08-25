@@ -5,11 +5,11 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+  const metaData = data.site.siteMetadata
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} metaData={metaData}>
       <SEO title="All posts" />
       <div>
 
@@ -22,8 +22,8 @@ const BlogIndex = ({ data, location }) => {
               <Img 
                 fluid={node.frontmatter.images.childImageSharp.fluid} 
                 className="content__img" 
-                alt={node.frontmatter.title} 
-                title={node.frontmatter.title}
+                alt={title} 
+                title={title}
               />
             </Link>
           )
@@ -40,6 +40,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          name
+          summary
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

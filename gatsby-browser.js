@@ -1,6 +1,5 @@
-// custom typefaces
+// Custom typefaces
 import "typeface-nunito"
 
-// import "prismjs/themes/prism.css"
+// Custom style
 import "./src/assets/style.css"
-// import "github-markdown-css/github-markdown.css"

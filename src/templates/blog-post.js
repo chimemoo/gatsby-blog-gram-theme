@@ -11,12 +11,11 @@ import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  const metaData = data.site.siteMetadata
   const { previous, next } = pageContext
-  console.log(post.frontmatter.content)
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} metaData={metaData}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -44,6 +43,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
           <hr/>
         </header>
+        <section className="post-image-content">
         {
           post.frontmatter.content && (
             <Carousel showArrows={true}>
@@ -55,6 +55,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </Carousel>
           )
         }
+        </section>
         <section className="post-article" dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -103,6 +104,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          name
+          summary
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
