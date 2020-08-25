@@ -11,8 +11,9 @@ Added Feature from gatsby starter blog :
 2. Image Slider (On blog post)
 3. Dark/Light Theme
 
-Feature to add :
-1. Continuous scroll at Home Page
+Coming Feature :
+1. Tags
+2. Continuous scroll at Home Page
 <br><br>
 ## 🚀 Quick start
 
